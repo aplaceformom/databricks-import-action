@@ -39,6 +39,10 @@ Databricks personal access token.
 - See also: https://docs.databricks.com/dev-tools/api/latest/authentication.html
 - required: `true`
 
+### source
+Location of source for export.
+- required: `false`
+
 ### workspace
 Databricks workspace. If not provided then a workspace will be decided based on the git object reference.
 - required: `false`
