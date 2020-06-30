@@ -1,0 +1,22 @@
+# action.yml
+name: 'Databricks export'
+description: 'Export data into a Databricks workspace'
+inputs:
+  workspace:
+    description: 'Define the workspace to export the data to [optional]'
+  host:
+    description: "Databricks host endpoint. Must begin with 'https://'"
+    required: true
+  username:
+    description: 'Databricks username'
+    required: true
+  token:
+    description: 'Databricks token'
+    required: true
+  debug:
+    description: 'Enable debugging'
+    default: false
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
