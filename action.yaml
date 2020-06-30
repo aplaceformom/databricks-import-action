@@ -1,11 +1,11 @@
 # action.yml
-name: 'Databricks export'
-description: 'Export data into a Databricks workspace'
+name: 'Databricks Import'
+description: 'Import data into a Databricks workspace'
 inputs:
   source:
     description: 'Specify location of source directory. [default src]'
   workspace:
-    description: 'Define the workspace to export the data to [optional]'
+    description: 'Define the workspace to import the data into [optional]'
   host:
     description: "Databricks host endpoint. Must begin with 'https://'"
     required: true

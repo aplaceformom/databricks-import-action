@@ -32,4 +32,4 @@ if test "${INPUT_DEBUG}" = 'true'; then
 	: "$@"
 fi
 
-exec databricks workspace export_dir --overwrite "${INPUT_SOURCE:=./src}" "/${INPUT_WORKSPACE:=$(ref2env)}/spark"
+exec databricks workspace import_dir --overwrite "${INPUT_SOURCE:=./src}" "/${INPUT_WORKSPACE:=$(ref2env)}/spark"

@@ -1,8 +1,8 @@
-Databricks export action
+Databricks import action
 ========================
 
 This [GitHub Action][GitHub Actions] allows performing the equivilant of
-`databricks workspace export_dir` against a source directory.
+`databricks workspace import_dir --overwrite` against a source directory.
 
 This action expects the Databricks workspace to already exist.
 
@@ -15,7 +15,7 @@ Usage
 
 ### Executing an existing task
 ```yaml
-  - name: Databricks export
+  - name: Databricks Import
     uses: docker://apfm/databricks-action:latest
     with:
       host: https://my.databricks.instance
@@ -40,7 +40,7 @@ Databricks personal access token.
 - required: `true`
 
 ### source
-Location of source for export.
+Location of source for import.
 - required: `false`
 
 ### workspace
