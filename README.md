@@ -42,6 +42,7 @@ Databricks personal access token.
 ### source
 Location of source for import.
 - required: `false`
+- default: `./src`
 
 ### workspace
 Databricks workspace. If not provided then a workspace will be decided based on the git object reference.
