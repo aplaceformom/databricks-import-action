@@ -7,6 +7,7 @@ RUN set -e \
 	&& ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime \
 	&& apk --update add --no-cache --virtual .build-deps \
 	&& apk add --no-cache \
+		python3 \
 		build-base \
 		python3-dev \
 		libffi-dev \
