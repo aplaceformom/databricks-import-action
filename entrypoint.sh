@@ -1,8 +1,6 @@
 #!/bin/sh
 set -e
 
-cd /app
-
 ##
 # Map github ref to workspace
 ref2env()
