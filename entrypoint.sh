@@ -28,9 +28,10 @@ if test "${INPUT_DEBUG}" = 'true'; then
 	set -x
 	: '## Args'
 	: "$@"
+	: PWD="${PWD}"
+	: $(ls -A)
 fi
 
-echo "$*"
 if test "$#" -eq '0'; then
 	exec databricks workspace import_dir --overwrite "${INPUT_SOURCE:=./src}" "/${INPUT_WORKSPACE:=$(ref2env)}"
 else
