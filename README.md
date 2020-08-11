@@ -16,7 +16,7 @@ Usage
 ### Executing an existing task
 ```yaml
   - name: Databricks Import
-    uses: apfm-actions/databricks-import-action:latest
+    uses: apfm-actions/databricks-import-action@master
     with:
       host: https://my.databricks.instance
       username: mydatabricksuser
