@@ -15,6 +15,9 @@ Usage
 
 ### Executing an existing task
 ```yaml
+  - name: Checkout Source
+    uses: actions/checkout@v2
+
   - name: Databricks Import
     uses: apfm-actions/databricks-import-action@master
     with:
