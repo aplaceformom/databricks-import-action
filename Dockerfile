@@ -1,7 +1,5 @@
 FROM alpine:3.11.6
 
-WORKDIR /app
-
 # Prep base system
 RUN set -e \
 	&& ln -sf /usr/share/zoneinfo/Etc/UTC /etc/localtime \
