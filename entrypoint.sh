@@ -30,4 +30,9 @@ if test "${INPUT_DEBUG}" = 'true'; then
 	: "$@"
 fi
 
-exec databricks workspace import_dir --overwrite "${INPUT_SOURCE:=./src}" "/${INPUT_WORKSPACE:=$(ref2env)}"
+echo "$*"
+if test "$#" -eq '0'; then
+	exec databricks workspace import_dir --overwrite "${INPUT_SOURCE:=./src}" "/${INPUT_WORKSPACE:=$(ref2env)}"
+else
+	exec "$@"
+fi
