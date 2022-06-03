@@ -12,9 +12,10 @@ ref2env()
         esac
 
         case "${1}" in
-        (${INPUT_PROD:=tag})      set -- 'prod';;
-        (${INPUT_QA:=master})	  set -- 'qa';;
-        (${INPUT_DEV:=develop}|*) set -- 'dev';;
+        (${INPUT_PROD:=tag})         set -- 'prod';;
+        (${INPUT_STAGE:=master})     set -- 'stage';;
+        (${INPUT_QA:=release})       set -- 'qa';;
+        (${INPUT_DEV:=develop}|*)    set -- 'dev';;
         esac
 
         echo "${1}"
